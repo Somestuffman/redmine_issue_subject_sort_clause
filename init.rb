@@ -1,13 +1,12 @@
-require_dependency 'sort_helper'
 ActionDispatch::Callbacks.to_prepare do
 	require_dependency 'sort_clause_patch'
 end
 
-Redmine::Plugin.register :sorty do
-  name 'Sorty plugin'
+Redmine::Plugin.register :redmine_issue_subject_sort_clause do
+  name 'Redmine issue subject sort clause plugin'
   author 'Semen Formatorov'
-  description 'Patch for Redmine sort method'
+  description 'Plugin for correct issue sorting, when subject starts with a number'
   version '0.0.1'
-  url ''
-  author_url ''
+  url 'https://github.com/Somestuffman/redmine_issue_subject_sort_clause'
+  author_url 'https://github.com/Somestuffman'
 end
